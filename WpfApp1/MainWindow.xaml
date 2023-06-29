@@ -1,0 +1,108 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Generator drużyn" Height="500" Width="750">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Column="1" Grid.Row="1" Width="695" Height="205" Header="Koszyki">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                    <TextBlock Text="Ilość:" Margin="0,7,0,0"/>
+
+                    <ComboBox x:Name="PotsCountComboBox" Width="60" Margin="5,5,5,0" SelectedIndex="0">
+                        <ComboBoxItem>
+                            <TextBlock Text="2"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock Text="3"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock Text="4"/>
+                        </ComboBoxItem>
+                    </ComboBox>
+
+                    <Button x:Name="GeneratePotsButton" Content="Generuj" Width="75" Margin="0,5,0,0" Click="GeneratePotsButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="2"
+                    Orientation="Horizontal">
+                    <StackPanel x:Name="Pot1" Orientation="Vertical"/>
+                    <StackPanel x:Name="Pot2" Orientation="Vertical"/>
+                    <StackPanel x:Name="Pot3" Orientation="Vertical"/>
+                    <StackPanel x:Name="Pot4" Orientation="Vertical"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox x:Name="TeamsGroupBox" Grid.Column="1" Grid.Row="2" Width="695" Height="205" Header="Zespoły" IsEnabled="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                    <TextBlock Text="Ilość:" Margin="0,7,0,0"/>
+
+                    <ComboBox x:Name="TeamsCountComboBox" Width="60" Margin="5,5,5,0" SelectedIndex="0">
+                        <ComboBoxItem>
+                            <TextBlock Text="2"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock Text="3"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock Text="4"/>
+                        </ComboBoxItem>
+                    </ComboBox>
+
+                    <Button x:Name="GenerateTeamsButton" Content="Generuj" Width="75" Margin="0,5,0,0" Click="GenerateTeamsButton_Click"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.Row="2"
+                    Orientation="Horizontal">
+                    <StackPanel x:Name="Team1" Orientation="Vertical"/>
+                    <StackPanel x:Name="Team2" Orientation="Vertical"/>
+                    <StackPanel x:Name="Team3" Orientation="Vertical"/>
+                    <StackPanel x:Name="Team4" Orientation="Vertical"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>
